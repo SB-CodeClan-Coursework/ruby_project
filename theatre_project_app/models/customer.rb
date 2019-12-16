@@ -1,4 +1,4 @@
-require_relative( '../db/sql_runner' )
+require_relative('../db/sql_runner')
 
 class Customer
 
@@ -37,9 +37,31 @@ class Customer
     return Customers.new(results.first)
   end
 
+  def self.all()
+    sql = "SELECT * FROM customers"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| Customers.new(hash) }
+  end
+
   def self.delete_all
     sql = "DELETE FROM customers"
     SqlRunner.run(sql)
+  end
+
+  def update()
+    sql = "UPDATE customers
+    SET
+    (
+      name,
+      premium,
+      show_id
+    ) =
+    (
+      $1, $2, $3
+    )
+    WHERE id = $4"
+    values = [@name, @premium, @show_id, @id]
+    SqlRunner.run(sql, values)
   end
 
 end

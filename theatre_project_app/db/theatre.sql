@@ -7,7 +7,8 @@ CREATE TABLE shows
 (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
-  showtime VARCHAR(255) NOT NULL
+  showtime VARCHAR(255) NOT NULL,
+  maxcapcity INT
 );
 
 -- CREATE TABLE showtimes

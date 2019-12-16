@@ -11,7 +11,7 @@ end
 #   @customer = Customer.all()
 #   erb ( :"customer/index" )
 # end
-#
+
 # get '/customer/:id' do
 #   @customer = Customer.find(params['id'].to_i)
 #   erb( :"customer/show" )
