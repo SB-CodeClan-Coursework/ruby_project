@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <nav id="menu">
-        <li class="menu-item"><a href='/customers'>Customers</a></li>
-        <li class="menu-item"><a href='/customers/new'>New Booking</a></li>
-      </nav>
-      <%= yield %>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Not The Festival Theatre</title>
+</head>
+<body style="background-color:black;">
+  <img src="/images/curtain_left.png" align="left">
+  <img src="/images/curtain_right.png" align="right">
+<link rel="stylesheet" type="text/css" href="/styles/css.css">
+
+<body>
+
+
+
+  <h1>Not The Festival Theatre</h1>
+  <nav id="menu">
+    <ul>
+      <li class="menu-item"><a href='/customers'>Customers</a></li>
+      <li class="menu-item"><a href='/customers/new'>New Booking</a></li>
+    </ul>
+  </nav>
+  <%= yield %>
+</body>
 </html>
