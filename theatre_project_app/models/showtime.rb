@@ -1,34 +1,28 @@
 require_relative( '../db/sql_runner' )
 
-class Customer
+class Showtime
 
-  attr_accessor(:name, :premium, :show, :showdate)
+  attr_accessor(:showdate, :showtime)
   attr_reader(:id)
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
-    @name = options['name']
-    @premium = options['premium']
-    @show = options['show'].to_i
     @showdate = options['showdate']
     @showtime = options['showtime']
   end
 
   def save()
-    sql = "INSERT INTO customers
+    sql = "INSERT INTO showtimes
     (
-      name,
-      premium,
-      show,
-      showdate
+      showdate,
       showtime
     )
     VALUES
     (
-      $1, $2, $3, $4
+      $1, $2
     )
     RETURNING id"
-    values = [@name, @premium, @show, @showdate]
+    values = [@showdate, @showtime]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
