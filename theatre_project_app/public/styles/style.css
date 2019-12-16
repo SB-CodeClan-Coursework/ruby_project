@@ -1,4 +1,4 @@
-.block {
+/* .block {
   display: block;
   width: 100%;
   border: none;
@@ -7,9 +7,9 @@
   font-size: 16px;
   cursor: pointer;
   text-align: center;
-}
+} */
 
-body {
+/* body {
   background: black;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -17,18 +17,45 @@ body {
   font-family: 'Merriweather', serif;
   padding: 0px;
   margin: 0px;
-}
+} */
 
-h1 {
+/* h1 {
   text-align: center;
   font-size: 1.8em;
   color: darkred;
   margin-bottom: 20px;
-}
+} */
 
-ul {
+/* ul {
   text-align: center;
   font-size: 1.8em;
   color: darkred;
   margin-bottom: 20px;
+} */
+
+img {
+  padding: 0px;
+}
+
+.lcurtain {
+  align: left;
+  top: 0px;
+  /* z-index: 1; */
+  position: absolute;
+}
+
+.rcurtain {
+  align: right;
+  top: 0px;
+  /* z-index: 1; */
+  position: absolute;
+}
+
+.logo {
+  height: 300px;
+  width: auto;
+  align: center;
+  top: 0px;
+  /* z-index: 0; */
+  position: absolute;
 }
