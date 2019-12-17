@@ -12,14 +12,13 @@
   position: absolute;
 } */
 
-/* .logo {
-  height: 300px;
+.logo {
+  height: 20%;
   width: auto;
   align: center;
   top: 0px;
   z-index: 0;
-  position: absolute;
-} */
+}
 
 /* .block {
   display: block;

@@ -10,28 +10,28 @@ Show.delete_all
 show1 = Show.new({
   "name"        => "Bargain Hunt: LIVE!",
   "showtime"    => "Monday, 7pm",
-  "maxcapcity"  => 5
+  "maxcapacity"  => 5
     })
 show1.save()
 
 show2 = Show.new({
   "name" => "Die Hard: The Musical",
   "showtime" => "Tuesday, 7pm",
-  "maxcapcity"  => 5
+  "maxcapacity"  => 5
     })
 show2.save()
 
 show3 = Show.new({
   "name" => "Okey Dokey Tatoo",
   "showtime" => "Thursday, 7pm",
-  "maxcapcity"  => 5
+  "maxcapacity"  => 5
     })
 show3.save()
 
 show4 = Show.new({
   "name" => "Neebleton",
   "showtime" => "Friday, 7pm",
-  "maxcapcity"  => 5
+  "maxcapacity"  => 5
     })
 show4.save()
 

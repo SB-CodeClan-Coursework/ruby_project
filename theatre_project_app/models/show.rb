@@ -2,14 +2,14 @@ require_relative( '../db/sql_runner' )
 
 class Show
 
-  attr_accessor(:name, :showtime, :maxcapcity)
+  attr_accessor(:name, :showtime, :maxcapacity)
   attr_reader(:id)
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @showtime = options['showtime']
-    @maxcapcity = options['maxcapcity']
+    @maxcapacity = options['maxcapacity']
   end
 
   def save()
@@ -17,14 +17,14 @@ class Show
     (
       name,
       showtime,
-      maxcapcity
+      maxcapacity
     )
     VALUES
     (
       $1, $2, $3
     )
     RETURNING id"
-    values = [@name, @showtime, @maxcapcity]
+    values = [@name, @showtime, @maxcapacity]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -50,8 +50,13 @@ class Show
   end
 
   def customers()
-    customer = Customer.find(@customer_id)
-    return customer
+    sql = "SELECT * FROM customers
+          WHERE show_id = $1"
+    values = [@id]
+    results = SqlRunner.run( sql, values )
+    # [ {}, {} ]
+    return results.map { |customer_hash| Customer.new(customer_hash) }
+    # [ Customer, Customer ]
   end
 
   def update()
@@ -60,13 +65,13 @@ class Show
     (
       name,
       showtime,
-      maxcapcity
+      maxcapacity
     ) =
     (
       $1, $2, $3
     )
     WHERE id = $4"
-    values = [@name, @showtime, @maxcapcity, @id]
+    values = [@name, @showtime, @maxcapacity, @id]
     SqlRunner.run(sql, values)
   end
 
