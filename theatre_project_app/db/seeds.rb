@@ -78,5 +78,14 @@ customer6 = Customer.new({
   })
 customer6.save()
 
+customer7 = Customer.new({
+  "name" => "Владимир Путин",
+  "premium" => true,
+  "show_id" => show1.id
+  })
+customer7.save()
+
+
+
 pry.binding
 nil

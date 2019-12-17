@@ -1,7 +1,6 @@
 <ul>
   <% for customer in @customers %>
-  <li>
-    <p><%= customer.name %></p>
+  <li><p><a href="/customers/<%=customer.id%>"><%= customer.name %></a></p>
     <% end %>
   </li>
 </ul>

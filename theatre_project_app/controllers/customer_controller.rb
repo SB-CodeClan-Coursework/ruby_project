@@ -9,3 +9,8 @@ get '/customers/?' do
   @customers = Customer.all
   erb(:"customers/index")
 end
+
+get 'customers/:id' do
+  @customers = Customer.find(params['id'].to_i)
+  erb(:"customers/customer")
+end

@@ -2,9 +2,8 @@
   <li><p> <%= @show.name %> </p></li>
   <li><p> <%= @show.showtime %> </p></li>
   <li><p> <%= @show.maxcapacity %> </p></li>
-
-  <% for customer in @show.customers %>
-    <p><%= customer.name %></p>
-  <% end %>
-
 </ul>
+
+<% for customer in @show.customers %>
+  <p><a href="/customers/id<%= customer.name %></p>
+<% end %>
