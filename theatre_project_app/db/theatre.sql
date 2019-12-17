@@ -11,20 +11,6 @@ CREATE TABLE shows
   maxcapcity INT
 );
 
--- CREATE TABLE showtimes
--- (
---   id SERIAL PRIMARY KEY,
---   showdate VARCHAR(255),
---   showtime VARCHAR(255)
--- );
-
--- CREATE TABLE premshowtimes
--- (
---   id SERIAL PRIMARY KEY,
---   showdate VARCHAR(255),
---   showtime VARCHAR(255),
--- );
-
 CREATE TABLE customers
 (
   id SERIAL PRIMARY KEY,

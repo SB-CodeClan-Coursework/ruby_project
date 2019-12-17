@@ -1,7 +1,7 @@
-<!-- list all show names with link - clicking on one takes you to show.erb -->
 <ul>
-  <% for shows in @shows %>
+  <% for show in @shows %>
   <li>
-  <p><%= show.all %></p>
-  <% end %>
+    <p><a href="/shows/<%= show.id %>"> <%= show.name  %></a></p>
   </li>
+  <% end %>
+</ul>

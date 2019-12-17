@@ -8,3 +8,8 @@ get '/shows/?' do
   @shows = Show.all
   erb(:"shows/index")
 end
+
+get '/shows/:id' do
+  @show = Show.find(params['id'].to_i)
+  erb(:"shows/show")
+end

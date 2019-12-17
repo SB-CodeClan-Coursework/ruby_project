@@ -2,7 +2,7 @@ require_relative( '../db/sql_runner' )
 
 class Show
 
-  attr_accessor(:name, :maxcapcity)
+  attr_accessor(:name, :showtime, :maxcapcity)
   attr_reader(:id)
 
   def initialize(options)
@@ -33,8 +33,9 @@ class Show
     sql = "SELECT * FROM shows
     WHERE id = $1"
     values = [id]
-    results = SqlRunner.run(sql, values)
-    return Shows.new(results.first)
+    results = SqlRunner.run(sql, values).first
+    show = Show.new(results)
+    return show
   end
 
   def self.delete_all
@@ -48,10 +49,10 @@ class Show
     return results.map { |hash| Show.new(hash) }
   end
 
-  # def customers()
-  #   customer = Customer.find(@customer_id)
-  #   return customer
-  # end
+  def customers()
+    customer = Customer.find(@customer_id)
+    return customer
+  end
 
   def update()
     sql = "UPDATE customers
