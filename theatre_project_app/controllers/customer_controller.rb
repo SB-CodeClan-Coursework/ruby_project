@@ -10,7 +10,7 @@ get '/customers/?' do
   erb(:"customers/index")
 end
 
-get 'customers/:id' do
+get '/customers/:id' do
   @customers = Customer.find(params['id'].to_i)
-  erb(:"customers/customer")
+  erb(:"customers/show")
 end

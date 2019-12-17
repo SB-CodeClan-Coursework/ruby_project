@@ -34,7 +34,7 @@ class Customer
     WHERE id = $1"
     values = [id]
     results = SqlRunner.run(sql, values)
-    return Customers.new(results.first)
+    return Customer.new(results.first)
   end
 
   def self.all()
