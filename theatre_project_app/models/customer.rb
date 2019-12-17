@@ -40,7 +40,7 @@ class Customer
   def self.all()
     sql = "SELECT * FROM customers"
     results = SqlRunner.run( sql )
-    return results.map { |hash| Customers.new(hash) }
+    return results.map { |hash| Customer.new(hash) }
   end
 
   def self.delete_all

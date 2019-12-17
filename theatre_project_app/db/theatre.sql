@@ -31,6 +31,4 @@ CREATE TABLE customers
   name VARCHAR(255) NOT NULL,
   premium BOOLEAN,
   show_id INT REFERENCES shows(id)
-  -- premshowdate INT REFERENCES premshowtimes(id)
-  -- premshowtime INT REFERENCES premshowtimes(id)
 );

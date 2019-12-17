@@ -1,11 +1,14 @@
-require( 'sinatra' )
-require( 'sinatra/contrib/all' )
-require_relative( '../models/customer.rb' )
-also_reload( '../models/*' )
+require('sinatra')
+require('sinatra/contrib/all')
+require_relative('../models/customer.rb')
+require_relative('../models/show.rb')
+also_reload('../models/*')
 
-# get '/?' do
-#   @customer
-# end
+
+get '/customers/?' do
+  @customers = Customer.all
+  erb(:"customers/index")
+end
 
 # get '/customer' do
 #   @customer = Customer.all()

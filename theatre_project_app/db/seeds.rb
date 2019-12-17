@@ -29,7 +29,7 @@ show3 = Show.new({
 show3.save()
 
 show4 = Show.new({
-  "name" => "Fred West Side Story",
+  "name" => "Neebleton",
   "showtime" => "Friday, 7pm",
   "maxcapcity"  => 5
     })

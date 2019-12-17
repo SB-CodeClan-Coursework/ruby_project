@@ -42,6 +42,17 @@ class Show
     SqlRunner.run(sql)
   end
 
+  def self.all()
+    sql = "SELECT * FROM shows"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| Show.new(hash) }
+  end
+
+  # def customers()
+  #   customer = Customer.find(@customer_id)
+  #   return customer
+  # end
+
   def update()
     sql = "UPDATE customers
     SET

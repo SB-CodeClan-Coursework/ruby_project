@@ -1,53 +1,14 @@
-/* .block {
-  display: block;
-  width: 100%;
-  border: none;
-  background-color: #4CAF50;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
-} */
-
-/* body {
-  background: black;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  color: papayawhip;
-  font-family: 'Merriweather', serif;
-  padding: 0px;
-  margin: 0px;
-} */
-
-/* h1 {
-  text-align: center;
-  font-size: 1.8em;
-  color: darkred;
-  margin-bottom: 20px;
-} */
-
-/* ul {
-  text-align: center;
-  font-size: 1.8em;
-  color: darkred;
-  margin-bottom: 20px;
-} */
-
-img {
-  padding: 0px;
-}
-
-.lcurtain {
+/* .lcurtain {
   align: left;
   top: 0px;
-  /* z-index: 1; */
+  z-index: 1;
   position: absolute;
 }
 
 .rcurtain {
   align: right;
   top: 0px;
-  /* z-index: 1; */
+  z-index: 1;
   position: absolute;
 }
 
@@ -56,6 +17,53 @@ img {
   width: auto;
   align: center;
   top: 0px;
-  /* z-index: 0; */
+  z-index: 0;
   position: absolute;
+} */
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #4CAF50;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+body {
+  background: black;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: papayawhip;
+  font-family: 'Merriweather', serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8em;
+  color: darkred;
+  margin-bottom: 20px;
+}
+
+ul {
+  text-align: left;
+  font-size: 1em;
+  color: darkred;
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+img {
+  padding: 0px;
+}
+
+p {
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  margin-bottom: 20px;
 }
