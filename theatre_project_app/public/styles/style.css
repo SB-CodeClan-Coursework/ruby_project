@@ -23,9 +23,12 @@
   font-size: 16px;
 }
 
+.logo-container {
+  text-align: center;
+}
+
 .logo {
   height: 250px;
-  align: center;
   top: 0px;
   z-index: 0;
 }
@@ -85,8 +88,12 @@ img {
 }
 
 p {
-  text-align: center;
+  text-align: left;
   font-size: 1em;
   color: white;
   margin-bottom: 20px;
+}
+
+.buttons-container {
+  text-align: center;
 }

@@ -5,7 +5,7 @@ class Customer
   attr_accessor(:name, :premium, :show_id)
   attr_reader(:id)
 
-  def initialize( options )
+  def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @premium = options['premium']
@@ -41,7 +41,7 @@ class Customer
     sql = "SELECT * FROM customers
     ORDER BY name"
     results = SqlRunner.run( sql )
-    return results.map { |hash| Customer.new(hash) }
+    return results.map {|hash| Customer.new(hash)}
   end
 
   def self.delete_all
