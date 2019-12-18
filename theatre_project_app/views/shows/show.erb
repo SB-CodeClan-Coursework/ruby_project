@@ -1,7 +1,7 @@
 <ul>
   <li><p> <%= @show.name %> </p></li>
   <li><p> <%= @show.showtime %> </p></li>
-  <li><p> <%= @show.maxcapacity %> </p></li>
+  <li><p> Capacity: <%= @show.maxcapacity %> people </p></li>
 </ul>
 
 <% for customer in @show.customers %>

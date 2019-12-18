@@ -1,1 +1,10 @@
-lsnajkshska
+<ul>
+  <li><p> <%= @customer.name %> </p></li>
+  <p>is going to see</p>
+  <li><% for show in @customer.shows %>
+    <p><%= show.name %></p>
+  <% end %></li>
+</ul>
+<form class="submit" action="/customers/<%=@customer.id%>/edit" method="get">
+  <input type="submit" name="edit" value="EDIT!">
+</form>

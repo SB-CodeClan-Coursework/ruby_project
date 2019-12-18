@@ -1,0 +1,34 @@
+<h2>Edit <%= @customer.name %></h2>
+<form method="POST" action="/customers/<%= @customer.id %>">
+  <div class="form-wrapper">
+
+    <div class="form-el">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= @customer.name %>"/>
+    </div>
+
+    <div class="form-el">
+      <label for="show_select">Select Show:</label>
+      <select name="show_id" id="show_id" selected="<%= @customer.shows %>">
+        <% @shows.each do |show| %>
+        <% if show.id == @customer.show_id %>
+          <option value=<%= show.id %> selected><%= show.name %></option>
+        <% else %>
+          <option value=<%= show.id %>><%= show.name %></option>
+        <% end %>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-el">
+      <input type="submit" value="EDIT!"/>
+    </div>
+
+
+
+  </div>
+</form>
+
+
+<form action="/customers/<%= @customer.id %>/delete" method="POST"><input type="submit" value="Delete Booking!">
+</form>

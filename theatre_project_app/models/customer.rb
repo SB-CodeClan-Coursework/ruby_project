@@ -64,4 +64,12 @@ class Customer
     SqlRunner.run(sql, values)
   end
 
+  def shows()
+    sql = "SELECT * FROM shows
+          WHERE id = $1"
+    values = [@show_id]
+    results = SqlRunner.run(sql, values)
+    return results.map {|shows_hash| Show.new(shows_hash)}
+  end
+
 end

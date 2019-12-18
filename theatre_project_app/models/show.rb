@@ -33,8 +33,8 @@ class Show
     sql = "SELECT * FROM shows
     WHERE id = $1"
     values = [id]
-    results = SqlRunner.run(sql, values).first
-    show = Show.new(results)
+    results = SqlRunner.run(sql, values)
+    show = Show.new(results.first)
     return show
   end
 
@@ -54,9 +54,7 @@ class Show
           WHERE show_id = $1"
     values = [@id]
     results = SqlRunner.run( sql, values )
-    # [ {}, {} ]
     return results.map { |customer_hash| Customer.new(customer_hash) }
-    # [ Customer, Customer ]
   end
 
   def update()

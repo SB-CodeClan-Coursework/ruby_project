@@ -22,7 +22,7 @@ show2 = Show.new({
 show2.save()
 
 show3 = Show.new({
-  "name" => "Okey Dokey Tatoo",
+  "name" => "Okey Dokey Tattoo",
   "showtime" => "Thursday, 7pm",
   "maxcapacity"  => 5
     })
