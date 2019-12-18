@@ -10,6 +10,17 @@ get '/customers/?' do
   erb(:"customers/index")
 end
 
+get '/customers/new' do
+  @shows = Show.all
+  erb(:"customers/new")
+end
+
+post '/customers' do
+  @customer = Customer.new(params)
+  @customer.save
+  redirect to '/customers'
+end
+
 get '/customers/:id' do
   @customer = Customer.find(params['id'].to_i)
   erb(:"customers/show")
@@ -24,11 +35,11 @@ end
 post '/customers/:id' do
   customers = Customer.new(params)
   customers.update
-  erb (:"/customers/index")
+  redirect to '/customers'
 end
 
 post '/customers/:id/delete' do
-  customers = customer.find(params['id'])
+  customers = Customer.find(params['id'])
   customers.delete
   redirect to '/customers'
 end

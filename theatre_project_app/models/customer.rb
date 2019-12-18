@@ -9,7 +9,7 @@ class Customer
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @premium = options['premium']
-    @show_id = options['show_id']
+    @show_id = options['show_id'].to_i
   end
 
   def save()
@@ -38,7 +38,8 @@ class Customer
   end
 
   def self.all()
-    sql = "SELECT * FROM customers"
+    sql = "SELECT * FROM customers
+    ORDER BY name"
     results = SqlRunner.run( sql )
     return results.map { |hash| Customer.new(hash) }
   end

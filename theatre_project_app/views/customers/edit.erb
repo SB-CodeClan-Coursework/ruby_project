@@ -9,12 +9,12 @@
 
     <div class="form-el">
       <label for="show_select">Select Show:</label>
-      <select name="show_id" id="show_id" selected="<%= @customer.shows %>">
+      <select name="show_id" id="show_id">
         <% @shows.each do |show| %>
         <% if show.id == @customer.show_id %>
-          <option value=<%= show.id %> selected><%= show.name %></option>
+          <option value="<%= show.id %>" selected><%= show.name %></option>
         <% else %>
-          <option value=<%= show.id %>><%= show.name %></option>
+          <option value="<%= show.id %>"><%= show.name %></option>
         <% end %>
         <% end %>
       </select>
