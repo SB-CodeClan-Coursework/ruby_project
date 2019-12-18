@@ -21,15 +21,10 @@ get '/customers/:id/edit' do
   erb(:"customers/edit")
 end
 
-post '/customers/:id/edit' do
-  customer = Customer.new(params)
-  customer.update
-  redirect to "/customers/#{params['id']}"
-end
-
-post '/customers/:id/edit' do
-  customers = customer.find(params['id'])
-  redirect to '/customers'
+post '/customers/:id' do
+  customers = Customer.new(params)
+  customers.update
+  erb (:"/customers/index")
 end
 
 post '/customers/:id/delete' do
