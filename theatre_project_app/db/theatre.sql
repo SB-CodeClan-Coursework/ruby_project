@@ -16,5 +16,5 @@ CREATE TABLE customers
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   premium BOOLEAN,
-  show_id INT REFERENCES shows(id)
+  show_id INT REFERENCES shows(id) ON DELETE CASCADE
 );

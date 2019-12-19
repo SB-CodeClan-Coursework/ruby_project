@@ -9,7 +9,13 @@ get '/shows/?' do
   erb(:"shows/index")
 end
 
-get '/shows/:id' do
+get '/shows/:id/?' do
   @show = Show.find(params['id'].to_i)
   erb(:"shows/show")
+end
+
+post '/shows/:id/delete/?' do
+  shows = Show.find(params['id'])
+  shows.delete
+  redirect to '/shows'
 end

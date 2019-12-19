@@ -26,19 +26,19 @@ get '/customers/:id' do
   erb(:"customers/show")
 end
 
-get '/customers/:id/edit' do
+get '/customers/:id/edit/?' do
   @shows = Show.all
   @customer = Customer.find(params['id'].to_i)
   erb(:"customers/edit")
 end
 
-post '/customers/:id' do
+post '/customers/:id/?' do
   customers = Customer.new(params)
   customers.update
   redirect to '/customers'
 end
 
-post '/customers/:id/delete' do
+post '/customers/:id/delete/?' do
   customers = Customer.find(params['id'])
   customers.delete
   redirect to '/customers'

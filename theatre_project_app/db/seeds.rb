@@ -43,7 +43,7 @@ show5 = Show.new({
 show5.save()
 
 show6 = Show.new({
-  "name" => "That's Amazing! with Fiona Murray",
+  "name" => "I'm Out! with Duncan Bannatyne",
   "showtime" => "Saturday, 7pm",
   "maxcapacity"  => 100
     })
@@ -128,7 +128,7 @@ customer9 = Customer.new({
 customer9.save()
 
 customer10 = Customer.new({
-  "name" => "Mr T Rock",
+  "name" => "Mr The Rock",
   "premium" => false,
   "show_id" => show8.id
   })

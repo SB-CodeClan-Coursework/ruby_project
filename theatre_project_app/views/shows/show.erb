@@ -5,5 +5,8 @@
 </ul>
 
 <% for customer in @show.customers %>
-  <p><a href="/customers/id<%= customer.name %></p>
+  <p><a href="/customers/id<%= customer.name %>"</p>
 <% end %>
+
+<form action="/shows/<%= @show.id %>/delete" method="POST"><input type="submit" value="Delete Show!">
+</form>
